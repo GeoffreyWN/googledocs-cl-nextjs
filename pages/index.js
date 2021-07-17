@@ -7,8 +7,12 @@ export default function Home() {
       <Head>
         <title>Google Docs Cl</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </Head>
-      <Header/>
+      <Header />
     </div>
   )
 }
