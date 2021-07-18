@@ -54,7 +54,7 @@ function Doc() {
                 >
                     <Icon name="people" size="md" /> SHARE
                 </Button>
-                <img src={session.user.image} alt="user-image" className="cursor-pointer rounded-full h-10 w-10 ml-2" />
+                <img src={session.user.image} alt="user-image" onClick={signOut} className="cursor-pointer rounded-full h-10 w-10 ml-2" />
 
             </header>
             <TextEditor />
