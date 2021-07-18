@@ -12,7 +12,7 @@ const Header = () => {
                 rounded={true}
                 iconOnly={true}
                 ripple="dark"
-                className="md:inline-flex h-20 w-20 border-0"
+                className="hidden md:inline-flex h-20 w-20 border-0"
             >
                 <Icon name='menu' size="3xl" />
             </Button>
@@ -33,7 +33,7 @@ const Header = () => {
             >
                 <Icon name='apps' size="3xl" color="gray" />
             </Button>
-            <img src={session?.user?.image} alt="user-mage" onClick={signOut} loading="lazy" className="md:inline-flex cursor-pointer h-12 w-12 rounded-full ml-2" />
+            <img src={session?.user?.image} alt="user-mage" onClick={signOut} loading="lazy" className="hidden md:inline-flex cursor-pointer h-12 w-12 rounded-full ml-2" />
         </header>
     )
 }
