@@ -1,13 +1,12 @@
 import firebase from 'firebase'
 
-
 const firebaseConfig = {
-    apiKey: "AIzaSyBhj-iaizeeTI_pknKFvQBjm07KLmyqE5s",
-    authDomain: "gdocs-cl.firebaseapp.com",
-    projectId: "gdocs-cl",
-    storageBucket: "gdocs-cl.appspot.com",
-    messagingSenderId: "1003746084557",
-    appId: "1:1003746084557:web:3913f8ddc8a227b3930b84"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
 const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app()
