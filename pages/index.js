@@ -12,7 +12,7 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
 import { db } from '../firebase';
 import firebase from 'firebase'
-import { useCollectionOnce } from 'react-firebase-hooks/firestore'
+import { useCollection } from 'react-firebase-hooks/firestore'
 import DocumentRow from '../components/DocumentRow';
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false)
   const [input, setInput] = useState('')
 
-  const [snapshot] = useCollectionOnce(db.collection('userDocs').doc(session.user.email).collection('docs').orderBy('timestamp', 'desc'))
+  const [snapshot] = useCollection(db.collection('userDocs').doc(session.user.email).collection('docs').orderBy('timestamp', 'desc'))
 
   const createDocument = () => {
     if (!input) return
